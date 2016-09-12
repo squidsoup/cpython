@@ -160,8 +160,9 @@ Edit
   Show surrounding parens  # parenmatch (& Hyperparser)
 
 Shell  # pyshell
-  View Last Restart# pyshell.?
-  Restart Shell    # pyshell.?
+  View Last Restart    # pyshell.?
+  Restart Shell        # pyshell.?
+  Interrupt Execution  # pyshell.?
 
 Debug (Shell only)
   Go to File/Line
