@@ -227,7 +227,7 @@ Restart Shell
   Restart the shell to clean the environment.
 
 Interrupt Execution
-  Stop a running program
+  Stop a running program.
 
 Debug menu (Shell window only)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
