@@ -346,6 +346,8 @@ class JSONDecoder(object):
         """Decode a JSON document from ``s`` (a ``str`` beginning with
         a JSON document) and return a 2-tuple of the Python
         representation and the index in ``s`` where the document ended.
+        Whitespace at the beginning of the document will be ignored.
+
         Optionally, ``idx`` can be used to specify an offset in ``s``
         where the document begins.
 
