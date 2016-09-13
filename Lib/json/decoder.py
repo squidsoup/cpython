@@ -346,13 +346,16 @@ class JSONDecoder(object):
         """Decode a JSON document from ``s`` (a ``str`` beginning with
         a JSON document) and return a 2-tuple of the Python
         representation and the index in ``s`` where the document ended.
+        Optionally, ``idx`` can be used to specify an offset in ``s``
+        where the document begins.
 
         This can be used to decode a JSON document from a string that may
         have extraneous data at the end.
 
         """
+        _w = WHITESPACE.match
         try:
-            obj, end = self.scan_once(s, idx)
+            obj, end = self.scan_once(s, idx=_w(s, idx).end())
         except StopIteration as err:
             raise JSONDecodeError("Expecting value", s, err.value) from None
         return obj, end
